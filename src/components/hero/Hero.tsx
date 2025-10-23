@@ -1,6 +1,7 @@
 import React, { JSX, ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 type CTA = {
     label: string
@@ -27,7 +28,7 @@ export default function Hero({
         </>
     ),
     subtitle = <>Equipate con lo mejor</>,
-    heightClass = 'h-56 md:h-96 lg:h-[32rem]',
+    heightClass = 'h-56 md:h-96 lg:h-[70rem]',
     overlayOpacity = 0.6,
     cta = null,
     outlineTitle = false,
@@ -55,8 +56,8 @@ export default function Hero({
             <div className="absolute inset-0" style={overlayStyle} />
 
             {/* Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-                <div className="text-white">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full uppercase flex items-center">
+                <div className="text-white ">
                     <h1
                         className={`font-extrabold leading-tight tracking-tight text-[clamp(1.6rem,6vw,2.5rem)] md:text-[clamp(2.4rem,6.5vw,4.5rem)]`}
                     >
@@ -66,7 +67,7 @@ export default function Hero({
                     <p
                         className={`mt-3 font-semibold text-[clamp(1rem,3.5vw,1.5rem)] md:text-[clamp(1.25rem,3.5vw,2rem)]`}
                     >
-                        <span className={outlineSubtitle ? 'text-outline' : ''}>{subtitle}</span>
+                        <span className={outlineSubtitle ? 'text-outline' : ''}>{subtitle} <ArrowRight /></span>
                     </p>
 
                     {cta && (

@@ -2,6 +2,7 @@
 
 import React, { useState, FormEvent, JSX } from 'react';
 import { sendContact, ContactPayload } from '../../services/email';
+import Image from 'next/image';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
@@ -62,20 +63,19 @@ export default function ContactForm(): JSX.Element {
     };
 
     return (
-        <section className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-sm">
-            <header className="flex items-center gap-4 mb-4">
-                {/* Logo blanco y negro inline (puedes reemplazar por <img src="/logo.svg" />) */}
-                <div aria-hidden className="w-12 h-12 flex items-center justify-center bg-black rounded">
-                    <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                        <rect width="24" height="24" rx="4" fill="currentColor" />
-                        <path d="M6 15L18 3" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M3 18L9 12" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M14 10l4 4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+        <section className="max-w-3xl mx-auto p-6 bg-[#E5E7EB] rounded-lg shadow-md my-12">
+            <header className="flex items-center gap-4 mb-4 bg-[#171611] rounded-full px-4 py-2 text-[#E5E7EB]">
+                <div aria-hidden className="w-12 h-12 flex items-center justify-center">
+                    <Image
+                        src="/img/chispa.ico"
+                        alt="Logo La Chispa "
+                        width={48}
+                        height={48}
+                    />
                 </div>
 
                 <div>
-                    <h2 className="text-lg font-semibold">Contacto — Ferretería Faustino</h2>
+                    <h2 className="text-[3rem] uppercase opacity-20 font-semibold">Contacto La Chispa</h2>
                     <p className="text-sm text-gray-600">Pedidos, presupuestos o consultas técnicas. Respondemos a la brevedad.</p>
                 </div>
             </header>
@@ -83,73 +83,67 @@ export default function ContactForm(): JSX.Element {
             <form onSubmit={handleSubmit} noValidate className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <label className="flex flex-col">
-                        <span className="text-sm text-gray-700 mb-1">Nombre *</span>
                         <input
                             type="text"
                             value={name}
                             onChange={e => setName(e.target.value)}
                             placeholder="Nombre y apellido"
                             required
-                            className="px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[#171611]"
                         />
                     </label>
 
                     <label className="flex flex-col">
-                        <span className="text-sm text-gray-700 mb-1">Empresa (opcional)</span>
                         <input
                             type="text"
                             value={company}
                             onChange={e => setCompany(e.target.value)}
-                            placeholder="Distribuidor / Constructora"
-                            className="px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                            placeholder="Empresa (opcional)"
+                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[#171611]"
                         />
                     </label>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <label className="flex flex-col">
-                        <span className="text-sm text-gray-700 mb-1">Correo *</span>
                         <input
                             type="email"
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                             placeholder="tu@correo.com"
                             required
-                            className="px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[#171611]"
                         />
                     </label>
 
                     <label className="flex flex-col">
-                        <span className="text-sm text-gray-700 mb-1">Teléfono</span>
                         <input
                             type="tel"
                             value={phone}
                             onChange={e => setPhone(e.target.value)}
                             placeholder="+54 9 11 1234 5678"
-                            className="px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[#171611]"
                         />
                     </label>
                 </div>
 
                 <label className="flex flex-col">
-                    <span className="text-sm text-gray-700 mb-1">Asunto</span>
                     <input
                         type="text"
                         value={subject}
                         onChange={e => setSubject(e.target.value)}
-                        className="px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                        className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[#171611]"
                     />
                 </label>
 
                 <label className="flex flex-col">
-                    <span className="text-sm text-gray-700 mb-1">Mensaje *</span>
                     <textarea
                         value={message}
                         onChange={e => setMessage(e.target.value)}
                         rows={6}
                         placeholder="Especificá productos, cantidades, o el detalle de tu consulta..."
                         required
-                        className="px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black resize-vertical"
+                        className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#171611] resize-none"
                     />
                 </label>
 
@@ -164,7 +158,7 @@ export default function ContactForm(): JSX.Element {
                         type="submit"
                         disabled={status === 'sending'}
                         aria-busy={status === 'sending'}
-                        className="inline-flex items-center px-4 py-2 bg-black text-white rounded-md font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+                        className="inline-flex items-center px-4 py-2 bg-[#171611] text-[#E5E7EB] rounded-md font-medium disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                         {status === 'sending' ? 'Enviando…' : 'Enviar mensaje'}
                     </button>

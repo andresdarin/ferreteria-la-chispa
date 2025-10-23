@@ -15,7 +15,7 @@ export default function Header(): JSX.Element {
                     <Image src="/img/chispa.ico" alt="Ferretería Faustino" width={50} height={50} />
 
                     {/* Desktop nav */}
-                    <nav className="hidden md:flex items-center space-x-6">
+                    <nav className="hidden md:flex items-center space-x-6 uppercase font-medium">
                         {NAV_LINKS.map((link) =>
                             link.cta ? (
                                 <Link

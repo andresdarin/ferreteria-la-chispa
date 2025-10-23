@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 :root {
+  --font-montserrat: ${montserrat.style.fontFamily};
+  --font-londrina: ${londrina.style.fontFamily};
+
   --background: #ffffff;
   --foreground: #171717;
 
@@ -9,15 +12,15 @@
   --color-primary-light: #F1DE6E;  /* tu amarillo/dorado */
   --color-accent: #0EA5A4;         /* contraste/teal */
   --color-accent-600: #0B8F87;     /* variante un poco más oscura del accent */
-  --color-neutral-600: #6B7280;
-  --color-neutral-200: #E5E7EB;
-  --color-surface-dark: #0F1720;
+  --color-neutral-600: #6B7280;  /* gris medio */
+  --color-neutral-200: #E5E7EB; /* gris claro */
+  --color-surface-dark: #0F1720; /* para fondos oscuros */
 
   /* Usos semánticos */
-  --color-bg: var(--background);
-  --color-text: var(--foreground);
-  --color-muted: var(--color-neutral-600);
-  --color-border: #E6E7E9;
+  --color-bg: var(--background);  /* fondo principal */
+  --color-text: var(--foreground); /* texto principal */
+  --color-muted: var(--color-neutral-600); /* texto secundario */
+  --color-border: #E6E7E9; /* bordes y separadores */
 }
 
 @theme inline {
