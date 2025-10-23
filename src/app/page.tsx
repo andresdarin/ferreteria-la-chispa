@@ -1,14 +1,16 @@
-import ContactForm from "@/components/Contact/ContactForm";
-import Image from "next/image";
+import Header from '@/components/header/Header'
+import Hero from '@/components/hero/Hero'
+import { JSX } from 'react'
 
-export default function Home() {
+export default function Page(): JSX.Element {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <h1 className="text-4xl font-bold text-center">
-        Bienvenido a la Ferreteria Faustino
-
-      </h1>
-      <ContactForm />
-    </div>
-  );
+    <main>
+      <Header />
+      <Hero />
+      <section className="max-w-4xl mx-auto p-6">
+        <h2 className="text-2xl font-semibold mb-4">Secciones</h2>
+        <p className="text-[--color-primary-dark]">Resto del contenido de la landing...</p>
+      </section>
+    </main>
+  )
 }
