@@ -3,6 +3,7 @@
 import React, { useState, FormEvent, JSX } from 'react';
 import { sendContact, ContactPayload } from '../../services/email';
 import Image from 'next/image';
+import ContactSidebar from './ContactSidebar';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
@@ -63,7 +64,7 @@ export default function ContactForm(): JSX.Element {
     };
 
     return (
-        <section className="max-w-3xl mx-auto p-6 bg-[#E5E7EB] rounded-lg shadow-md my-12">
+        <section className="max-w-7xl mx-auto p-6 space-y-4 bg-[#E5E7EB] rounded-l-4xl my-12">
             <header className="flex items-center gap-4 mb-4 bg-[#171611] rounded-full px-4 py-2 text-[#E5E7EB]">
                 <div aria-hidden className="w-12 h-12 flex items-center justify-center">
                     <Image
@@ -75,98 +76,104 @@ export default function ContactForm(): JSX.Element {
                 </div>
 
                 <div>
-                    <h2 className="text-[3rem] uppercase opacity-20 font-semibold">Contacto La Chispa</h2>
-                    <p className="text-sm text-gray-600">Pedidos, presupuestos o consultas técnicas. Respondemos a la brevedad.</p>
+                    <h2 className="text-[3rem] text-[#F1DE6E] relative pt-0 uppercase font-light">Contacto</h2>
                 </div>
             </header>
 
-            <form onSubmit={handleSubmit} noValidate className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <label className="flex flex-col">
-                        <input
-                            type="text"
-                            value={name}
-                            onChange={e => setName(e.target.value)}
-                            placeholder="Nombre y apellido"
-                            required
-                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[#171611]"
-                        />
-                    </label>
+            <form onSubmit={handleSubmit} noValidate className="flex flex-col  md:flex-row gap-6">
+                <div className='space-y-8 basis-2/3'>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+                        <label className="flex flex-col">
+                            <input
+                                type="text"
+                                value={name}
+                                onChange={e => setName(e.target.value)}
+                                placeholder="Nombre y apellido"
+                                required
+                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 focus:outline-none "
+                            />
+                        </label>
 
-                    <label className="flex flex-col">
-                        <input
-                            type="text"
-                            value={company}
-                            onChange={e => setCompany(e.target.value)}
-                            placeholder="Empresa (opcional)"
-                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[#171611]"
-                        />
-                    </label>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <label className="flex flex-col">
-                        <input
-                            type="email"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
-                            placeholder="tu@correo.com"
-                            required
-                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[#171611]"
-                        />
-                    </label>
-
-                    <label className="flex flex-col">
-                        <input
-                            type="tel"
-                            value={phone}
-                            onChange={e => setPhone(e.target.value)}
-                            placeholder="+54 9 11 1234 5678"
-                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[#171611]"
-                        />
-                    </label>
-                </div>
-
-                <label className="flex flex-col">
-                    <input
-                        type="text"
-                        value={subject}
-                        onChange={e => setSubject(e.target.value)}
-                        className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[#171611]"
-                    />
-                </label>
-
-                <label className="flex flex-col">
-                    <textarea
-                        value={message}
-                        onChange={e => setMessage(e.target.value)}
-                        rows={6}
-                        placeholder="Especificá productos, cantidades, o el detalle de tu consulta..."
-                        required
-                        className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#171611] resize-none"
-                    />
-                </label>
-
-                {errorMsg && (
-                    <div role="alert" className="text-red-700 bg-red-100 p-2 rounded">
-                        {errorMsg}
+                        <label className="flex flex-col">
+                            <input
+                                type="text"
+                                value={company}
+                                onChange={e => setCompany(e.target.value)}
+                                placeholder="Empresa (opcional)"
+                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2  focus:outline-none "
+                            />
+                        </label>
                     </div>
-                )}
 
-                <div className="flex items-center gap-4">
-                    <button
-                        type="submit"
-                        disabled={status === 'sending'}
-                        aria-busy={status === 'sending'}
-                        className="inline-flex items-center px-4 py-2 bg-[#171611] text-[#E5E7EB] rounded-md font-medium disabled:opacity-60 disabled:cursor-not-allowed"
-                    >
-                        {status === 'sending' ? 'Enviando…' : 'Enviar mensaje'}
-                    </button>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label className="flex flex-col">
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                                placeholder="tu@correo.com"
+                                required
+                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2  focus:outline-none "
+                            />
+                        </label>
 
-                    {status === 'success' && <span className="text-green-600">¡Mensaje enviado! Te contactamos pronto.</span>}
-                    {status === 'error' && <span className="text-red-600">Error al enviar.</span>}
+                        <label className="flex flex-col">
+                            <input
+                                type="tel"
+                                value={phone}
+                                onChange={e => setPhone(e.target.value)}
+                                placeholder="+54 9 11 1234 5678"
+                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2  focus:outline-none "
+                            />
+                        </label>
+                    </div>
+
+                    <label className="flex flex-col">
+                        <input
+                            type="text"
+                            value={subject}
+                            onChange={e => setSubject(e.target.value)}
+                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2  focus:outline-none "
+                        />
+                    </label>
+
+                    <label className="flex flex-col">
+                        <textarea
+                            value={message}
+                            onChange={e => setMessage(e.target.value)}
+                            rows={6}
+                            placeholder="Especificá productos, cantidades, o el detalle de tu consulta..."
+                            required
+                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 focus:outline-none resize-none"
+                        />
+                    </label>
+
+                    {errorMsg && (
+                        <div role="alert" className="text-red-700 bg-red-100 p-2 rounded">
+                            {errorMsg}
+                        </div>
+                    )}
+
+                    <div className="flex items-center gap-4 justify-end">
+                        <button
+                            type="submit"
+                            disabled={status === 'sending'}
+                            aria-busy={status === 'sending'}
+                            className="inline-flex items-center  px-4 py-2 bg-[#171611] text-[#E5E7EB] rounded-md font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+                        >
+                            {status === 'sending' ? 'Enviando…' : 'Enviar mensaje'}
+                        </button>
+
+                        {status === 'success' && <span className="text-green-600">¡Mensaje enviado! Te contactamos pronto.</span>}
+                        {status === 'error' && <span className="text-red-600">Error al enviar.</span>}
+                    </div>
+                </div>
+                <div className='basis-1/3'>
+                    <ContactSidebar />
                 </div>
             </form>
         </section>
+
+
     );
 }
