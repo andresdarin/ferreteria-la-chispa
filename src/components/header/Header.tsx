@@ -12,7 +12,7 @@ export default function Header(): JSX.Element {
         <header className="w-full absolute top-0 left-0 z-30">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
-                    <Image src="/img/chispa.ico" alt="Ferretería Faustino" width={50} height={50} />
+                    <Image src="/img/chispa.ico" alt="Ferretería La Chispa" width={50} height={50} />
 
                     {/* Desktop nav */}
                     <nav className="hidden md:flex items-center space-x-6 uppercase font-medium">

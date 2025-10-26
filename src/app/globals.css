@@ -3,6 +3,7 @@
 :root {
   --font-montserrat: ${montserrat.style.fontFamily};
   --font-londrina: ${londrina.style.fontFamily};
+  --font-lato: ${lato.style.fontFamily};
 
   --background: #ffffff;
   --foreground: #171717;
@@ -43,7 +44,6 @@
 body {
   background: #E5E7EB;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Outline text utility: usa -webkit-text-stroke + fallback con text-shadow */

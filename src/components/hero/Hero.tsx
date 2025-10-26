@@ -30,7 +30,7 @@ export default function Hero({
             EQUIPATE CON <span className="text-stroke-yellow">LO MEJOR</span>
         </>
     ),
-    cta = { label: "Ver productos", href: "#categorias", target: "_self" },
+    cta = { label: "CTA", href: "#categorias", target: "_self" },
     imgAlt = "Taladro profesional - La Chispa",
     imgSrc = "/img/bg-hero.png",
     heightClass = "h-[78vh] md:h-[88vh]",
@@ -61,8 +61,8 @@ export default function Hero({
                             fontSize: "clamp(2.6rem, 7.5vw, 5.5rem)",
                         }}
                     >
-                        <span className="block">{/* Line 1 */}TU PROYECTO EMPIEZA</span><span className="text-stroke-yellow font-[--font-londrina]">ACÁ.</span>
-                        <span className="block mt-3">EQUIPATE CON LO <span className="text-stroke-yellow font-[--font-londrina]">MEJOR</span></span>
+                        <span className="block">{/* Line 1 */}TU PROYECTO EMPIEZA</span><span className="text-stroke-yellow ">ACÁ.</span>
+                        <span className="block mt-3">EQUIPATE CON LO </span> <span className="text-stroke-yellow ">MEJOR</span>
                     </h1>
 
                     {/* CTA */}
