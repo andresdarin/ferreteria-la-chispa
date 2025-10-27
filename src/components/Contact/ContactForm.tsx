@@ -64,7 +64,7 @@ export default function ContactForm(): JSX.Element {
     };
 
     return (
-        <section className="max-w-7xl mx-auto p-6 space-y-4 bg-[#E5E7EB] rounded-l-4xl my-12">
+        <section className="mx-auto bg-[#E5E7EB] rounded-b-4xl px-40 py-40">
             <header className="flex items-center gap-4 mb-4 bg-[#171611] rounded-full px-4 py-2 text-[#E5E7EB]">
                 <div aria-hidden className="w-12 h-12 flex items-center justify-center">
                     <Image

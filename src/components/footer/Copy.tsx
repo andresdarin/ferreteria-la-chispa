@@ -12,7 +12,7 @@ export const Copy = () => {
                     rel="noopener noreferrer"
                     className="hover:underline"
                 >
-                    andresweblab
+                    jasd
                 </a>
                 .
             </p>
