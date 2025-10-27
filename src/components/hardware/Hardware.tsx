@@ -43,10 +43,21 @@ export const HardwareCategories: React.FC = () => {
 
     return (
         <section className=" py-16">
-            <div className="max-w-6xl mx-auto px-6">
-                <h2 className="text-3xl font-bold text-white mb-10 text-center">
-                    🔩 Sectores y Especialidades
-                </h2>
+            <div className="max-w-7xl mx-auto px-6">
+                <header className="flex items-center gap-4 mb-4 bg-[#171611] rounded-full px-4 py-2 text-[#E5E7EB]">
+                    <div aria-hidden className="w-12 h-12 flex items-center justify-center">
+                        <Image
+                            src="/img/chispa.ico"
+                            alt="Logo La Chispa "
+                            width={48}
+                            height={48}
+                        />
+                    </div>
+
+                    <div>
+                        <h2 className="text-[3rem] text-[#F1DE6E] relative pt-0 uppercase font-light">Sectores y Especialidades</h2>
+                    </div>
+                </header>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {categories.map((cat, i) => (

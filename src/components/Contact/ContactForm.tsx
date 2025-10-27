@@ -64,8 +64,8 @@ export default function ContactForm(): JSX.Element {
     };
 
     return (
-        <section className="mx-auto bg-[#E5E7EB] rounded-b-4xl px-40 py-40">
-            <header className="flex items-center gap-4 mb-4 bg-[#171611] rounded-full px-4 py-2 text-[#E5E7EB]">
+        <section className="mx-auto bg-[#E5E7EB] rounded-b-4xl px-40 py-40 flex items-center justify-center flex-col">
+            <header className="flex items-center gap-4 mb-4 bg-[#171611] rounded-full px-4 py-2 text-[#E5E7EB] w-7xl">
                 <div aria-hidden className="w-12 h-12 flex items-center justify-center">
                     <Image
                         src="/img/chispa.ico"
@@ -80,8 +80,8 @@ export default function ContactForm(): JSX.Element {
                 </div>
             </header>
 
-            <form onSubmit={handleSubmit} noValidate className="flex flex-col  md:flex-row gap-6">
-                <div className='space-y-8 basis-2/3'>
+            <form onSubmit={handleSubmit} noValidate className="flex flex-col  md:flex-row gap-6 w-7xl">
+                <div className='space-y-8 basis-3/4'>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                         <label className="flex flex-col">
                             <input

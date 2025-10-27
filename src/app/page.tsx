@@ -4,8 +4,8 @@ import { Footer } from '@/components/footer/Footer'
 import { HardwareCategories } from '@/components/hardware/Hardware'
 import Header from '@/components/header/Header'
 import Hero from '@/components/hero/Hero'
-import { PaintshopSection } from '@/components/paintshop/PaintShop'
-import { IronStovesSection } from '@/components/stoves/StovesShop'
+import { PaintshopCategories } from '@/components/paintshop/PaintShop'
+import { MetavilaStovesSection } from '@/components/stoves/StovesShop'
 import { JSX } from 'react'
 
 export default function Page(): JSX.Element {
@@ -15,10 +15,12 @@ export default function Page(): JSX.Element {
       <div className="bg-[#171611]">
         <Hero />
       </div>
-      <Achievements />
+      <div className="bg-[#f5f5f5]">
+        <Achievements />
+      </div>
+      <PaintshopCategories />
       <HardwareCategories />
-      <PaintshopSection />
-      <IronStovesSection />
+      <MetavilaStovesSection />
       <div className='bg-[#171611]'>
         <ContactForm />
       </div>
