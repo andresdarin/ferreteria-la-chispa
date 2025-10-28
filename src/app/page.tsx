@@ -18,8 +18,8 @@ export default function Page(): JSX.Element {
       <div className="bg-[#f5f5f5]">
         <Achievements />
       </div>
-      <PaintshopCategories />
       <HardwareCategories />
+      <PaintshopCategories />
       <MetavilaStovesSection />
       <div className='bg-[#171611]'>
         <ContactForm />

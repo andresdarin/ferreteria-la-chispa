@@ -9,11 +9,11 @@ export default function Header(): JSX.Element {
     const [open, setOpen] = useState(false)
 
     return (
-        <header className="w-full absolute top-0 left-0 z-30 rounded-b-2xl bg-black/30 backdrop-blur-sm border-b border-white/10">
+        <header className="absolute top-5 left-20 z-30 w-3xl rounded-full bg-[#171611]/60 backdrop-blur-sm shadow-lg">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <Image
-                        src="/img/chispa.ico"
+                        src="/img/la-chispa-vector.png"
                         alt="Ferretería La Chispa"
                         width={50}
                         height={50}
@@ -25,7 +25,7 @@ export default function Header(): JSX.Element {
                                 <Link
                                     key={link.href}
                                     href={link.href}
-                                    className="ml-2 inline-block bg-sky-500 hover:bg-sky-600 text-white px-3 py-1.5 rounded-md text-sm"
+                                    className="ml-2 inline-block bg text-white px-3 py-1.5 rounded-md text-sm"
                                 >
                                     {link.label}
                                 </Link>
