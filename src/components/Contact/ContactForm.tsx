@@ -68,7 +68,7 @@ export default function ContactForm(): JSX.Element {
             className="bg-[#E5E7EB] rounded-b-4xl py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 flex flex-col items-center"
             id="contacto"
         >
-            <header className="flex flex-row sm:flex-row items-center gap-4 mb-8 bg-[#171611] rounded-full px-6 py-3 text-[#E5E7EB] w-full sm:w-7xl max-w-7xl">
+            <div className="flex flex-row sm:flex-row items-center gap-4 mb-8 bg-[#171611] rounded-full px-6 py-3 text-[#E5E7EB] w-full max-w-7xl">
                 <div aria-hidden className="w-12 h-12 flex flex-col items-center justify-center shrink-0">
                     <Image
                         src="/img/chispa.ico"
@@ -83,18 +83,19 @@ export default function ContactForm(): JSX.Element {
                         Contacto
                     </h2>
                 </div>
-            </header>
+            </div>
 
             <form
                 onSubmit={handleSubmit}
                 noValidate
-                className="flex flex-col md:flex-row gap-10 w-full sm:w-7xl max-w-7xl"
+                className="flex flex-col md:flex-row gap-10 w-full max-w-7xl"
             >
                 {/* Formulario */}
                 <div className="space-y-8 basis-full md:basis-3/4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <label className="flex flex-col">
+                        <label htmlFor="name" className="flex flex-col">
                             <input
+                                id="name"
                                 type="text"
                                 value={name}
                                 onChange={e => setName(e.target.value)}
@@ -104,8 +105,9 @@ export default function ContactForm(): JSX.Element {
                             />
                         </label>
 
-                        <label className="flex flex-col">
+                        <label htmlFor="company" className="flex flex-col">
                             <input
+                                id="company"
                                 type="text"
                                 value={company}
                                 onChange={e => setCompany(e.target.value)}
@@ -116,8 +118,9 @@ export default function ContactForm(): JSX.Element {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <label className="flex flex-col">
+                        <label htmlFor="email" className="flex flex-col">
                             <input
+                                id="email"
                                 type="email"
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
@@ -127,8 +130,9 @@ export default function ContactForm(): JSX.Element {
                             />
                         </label>
 
-                        <label className="flex flex-col">
+                        <label htmlFor="phone" className="flex flex-col">
                             <input
+                                id="phone"
                                 type="tel"
                                 value={phone}
                                 onChange={e => setPhone(e.target.value)}
@@ -138,8 +142,9 @@ export default function ContactForm(): JSX.Element {
                         </label>
                     </div>
 
-                    <label className="flex flex-col">
+                    <label htmlFor="subject" className="flex flex-col">
                         <input
+                            id="subject"
                             type="text"
                             value={subject}
                             onChange={e => setSubject(e.target.value)}
@@ -148,8 +153,9 @@ export default function ContactForm(): JSX.Element {
                         />
                     </label>
 
-                    <label className="flex flex-col">
+                    <label htmlFor="message" className="flex flex-col">
                         <textarea
+                            id="message"
                             value={message}
                             onChange={e => setMessage(e.target.value)}
                             rows={6}
@@ -173,7 +179,7 @@ export default function ContactForm(): JSX.Element {
                             type="submit"
                             disabled={status === 'sending'}
                             aria-busy={status === 'sending'}
-                            className="inline-flex items-center px-6 py-2 bg-[#171611] text-[#E5E7EB] rounded-md font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+                            className="inline-flex items-center px-6 py-2 bg-[#171611] text-[#E5E7EB] rounded-md font-medium disabled:opacity-60 disabled:cursor-not-allowed hover:bg-[#2a2820] transition-colors"
                         >
                             {status === 'sending' ? 'Enviando…' : 'Enviar mensaje'}
                         </button>
@@ -197,8 +203,5 @@ export default function ContactForm(): JSX.Element {
                 </div>
             </form>
         </section>
-
-
-
     );
 }

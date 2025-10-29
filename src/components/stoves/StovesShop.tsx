@@ -20,6 +20,8 @@ export const MetavilaStovesSection: React.FC = () => {
                         src="/img/banner-hero.webp"
                         alt="Estufa Metavila"
                         className="w-full h-auto object-cover"
+                        width={800}
+                        height={400}
                     />
                 </div>
 
