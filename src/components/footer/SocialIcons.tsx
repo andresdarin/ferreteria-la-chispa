@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter, FaInstagram, FaThreads } from "react-icons/fa6"
+import { FaFacebookF, FaInstagram, FaThreads } from "react-icons/fa6"
 
 export const SocialIcons = () => {
     return (

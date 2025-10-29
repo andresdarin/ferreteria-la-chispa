@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const MetavilaStovesSection: React.FC = () => {
     return (
         <section className="bg-[#f8efe6] py-16 shadow-xl/30 mx-auto my-16">
@@ -14,7 +16,7 @@ export const MetavilaStovesSection: React.FC = () => {
                 </p>
 
                 <div className="rounded-2xl overflow-hidden shadow-lg max-w-4xl mx-auto">
-                    <img
+                    <Image
                         src="/img/banner-hero.webp"
                         alt="Estufa Metavila"
                         className="w-full h-auto object-cover"

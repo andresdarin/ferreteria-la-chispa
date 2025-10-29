@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛠️ Ferretería La Chispa
 
-## Getting Started
+Landing page estática para presentar la ferretería de forma clara, moderna y rápida. Optimizada para rendimiento, accesibilidad y diseño responsivo.
 
-First, run the development server:
+> Presentación corporativa lista para escalar a e‑commerce.
+
+---
+
+## 🚀 Demo
+
+
+* [https://andresdarin.github.io/ferreteria-la-chispa](https://andresdarin.github.io/ferreteria-la-chispa)
+
+---
+
+## ✨ Características
+
+* Diseño responsivo (mobile + desktop)
+* Código TypeScript + Tailwind
+* Rápida y accesible (etiquetas semánticas, ARIA, contraste)
+* Base preparada para futuro e‑commerce
+
+---
+
+## 🧩 Tecnologías
+
+* TypeScript
+* Tailwind
+* Next.js
+
+---
+
+## ⚙️ Instalación
 
 ```bash
+git clone https://github.com/andresdarin/ferreteria-la-chispa.git
+cd ferreteria-la-chispa
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏗️ Build / Producción
 
-## Learn More
+```bash
+npm run build
+npm run preview
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ☁️ Despliegue
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **Vercel** → repo conectado = deploy automático.
+* **Netlify** → build: `npm run build`, output: `.next`.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔍 Accesibilidad y rendimiento
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* HTML semántico (header, main, footer)
+* Alt en imágenes
+* Contraste legible
+* Lazy load de imágenes
+* Lighthouse verificado
+
+---
+
+## 🔧 Escalado a e‑commerce
+
+1. Modelo de datos: productos, stock, precios
+2. Backend o CMS (Strapi, Sanity)
+3. API REST/GraphQL
+4. Carrito y pagos (Stripe, PayPal)
+5. Login / usuarios
+6. SEO y metadatos dinámicos
+
+---
+
+## 🤝 Contribuir
+
+1. Fork
+2. Rama `feature/mi-cambio`
+3. Pull Request con descripción clara
+
+---
+
+## 📬 Contacto
+
+**Andrés Darín** — [@andresdarin](https://github.com/andresdarin)

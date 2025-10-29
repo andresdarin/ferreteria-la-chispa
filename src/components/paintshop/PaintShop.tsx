@@ -56,31 +56,37 @@ export const PaintshopCategories: React.FC = () => {
                     </div>
 
                     <div>
-                        <h2 className="text-[2rem] text-[#E5E7EB] relative pt-0 uppercase font-light">Sectores de Pinturería</h2>
+                        <h2 className="text-xl sm:text-3xl lg:text-[2rem] text-[#f5f5f5] uppercase font-light leading-tight">Sectores de Pinturería</h2>
                     </div>
                 </header>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
-                    {categories.map((cat, i) => (
-                        <div
-                            key={i}
-                            className="relative group rounded-2xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform"
-                        >
-                            <Image
-                                src={cat.image}
-                                alt={cat.title}
-                                width={500}
-                                height={320}
-                                className="object-cover w-full h-56 brightness-90 group-hover:brightness-70 transition-all"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/40 to-transparent" />
-                            <div className="absolute bottom-0 p-5 text-white">
-                                <h3 className="text-xl font-bold">{cat.title}</h3>
-                                <p className="text-sm text-gray-200">{cat.description}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[220px] gap-6 py-8 grid-flow-dense">
+                    {categories.map((cat, i) => {
+                        // define qué ítems se expanden
+                        const isLarge = i % 4 === 0 || i % 7 === 0;
+                        const span = isLarge ? "lg:col-span-2 lg:row-span-2" : "";
+
+                        return (
+                            <div
+                                key={i}
+                                className={`relative group rounded-2xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform ${span}`}
+                            >
+                                <Image
+                                    src={cat.image}
+                                    alt={cat.title}
+                                    fill
+                                    className="object-cover brightness-90 group-hover:brightness-70 transition-all"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                                <div className="absolute bottom-0 p-5 text-white">
+                                    <h3 className="text-xl font-bold">{cat.title}</h3>
+                                    <p className="text-sm text-gray-200">{cat.description}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
+
             </div>
         </section>
     );

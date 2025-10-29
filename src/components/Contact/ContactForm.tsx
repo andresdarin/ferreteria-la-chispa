@@ -64,25 +64,35 @@ export default function ContactForm(): JSX.Element {
     };
 
     return (
-        <section className="mx-auto bg-[#E5E7EB] rounded-b-4xl px-40 py-40 flex items-center justify-center flex-col" id="contacto">
-            <header className="flex items-center gap-4 mb-4 bg-[#171611] rounded-full px-4 py-2 text-[#E5E7EB] w-7xl">
-                <div aria-hidden className="w-12 h-12 flex items-center justify-center">
+        <section
+            className="bg-[#E5E7EB] rounded-b-4xl py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 flex flex-col items-center"
+            id="contacto"
+        >
+            <header className="flex flex-row sm:flex-row items-center gap-4 mb-8 bg-[#171611] rounded-full px-6 py-3 text-[#E5E7EB] w-full sm:w-7xl max-w-7xl">
+                <div aria-hidden className="w-12 h-12 flex flex-col items-center justify-center shrink-0">
                     <Image
                         src="/img/chispa.ico"
-                        alt="Logo La Chispa "
+                        alt="Logo La Chispa"
                         width={48}
                         height={48}
                     />
                 </div>
 
-                <div>
-                    <h2 className="text-[2rem] text-[#F1DE6E] relative pt-0 uppercase font-light">Contacto</h2>
+                <div className="text-center sm:text-left">
+                    <h2 className="text-xl sm:text-3xl lg:text-[2rem] text-[#f5f5f5] uppercase font-light leading-tight">
+                        Contacto
+                    </h2>
                 </div>
             </header>
 
-            <form onSubmit={handleSubmit} noValidate className="flex flex-col  md:flex-row gap-6 w-7xl">
-                <div className='space-y-8 basis-3/4'>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+            <form
+                onSubmit={handleSubmit}
+                noValidate
+                className="flex flex-col md:flex-row gap-10 w-full sm:w-7xl max-w-7xl"
+            >
+                {/* Formulario */}
+                <div className="space-y-8 basis-full md:basis-3/4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <label className="flex flex-col">
                             <input
                                 type="text"
@@ -90,7 +100,7 @@ export default function ContactForm(): JSX.Element {
                                 onChange={e => setName(e.target.value)}
                                 placeholder="Nombre y apellido"
                                 required
-                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 focus:outline-none "
+                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 focus:outline-none"
                             />
                         </label>
 
@@ -100,7 +110,7 @@ export default function ContactForm(): JSX.Element {
                                 value={company}
                                 onChange={e => setCompany(e.target.value)}
                                 placeholder="Empresa (opcional)"
-                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2  focus:outline-none "
+                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 focus:outline-none"
                             />
                         </label>
                     </div>
@@ -113,7 +123,7 @@ export default function ContactForm(): JSX.Element {
                                 onChange={e => setEmail(e.target.value)}
                                 placeholder="tu@correo.com"
                                 required
-                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2  focus:outline-none "
+                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 focus:outline-none"
                             />
                         </label>
 
@@ -123,7 +133,7 @@ export default function ContactForm(): JSX.Element {
                                 value={phone}
                                 onChange={e => setPhone(e.target.value)}
                                 placeholder="+54 9 11 1234 5678"
-                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2  focus:outline-none "
+                                className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 focus:outline-none"
                             />
                         </label>
                     </div>
@@ -133,7 +143,8 @@ export default function ContactForm(): JSX.Element {
                             type="text"
                             value={subject}
                             onChange={e => setSubject(e.target.value)}
-                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2  focus:outline-none "
+                            placeholder="Asunto (opcional)"
+                            className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 focus:outline-none"
                         />
                     </label>
 
@@ -149,30 +160,44 @@ export default function ContactForm(): JSX.Element {
                     </label>
 
                     {errorMsg && (
-                        <div role="alert" className="text-red-700 bg-red-100 p-2 rounded">
+                        <div
+                            role="alert"
+                            className="text-red-700 bg-red-100 p-2 rounded text-sm sm:text-base"
+                        >
                             {errorMsg}
                         </div>
                     )}
 
-                    <div className="flex items-center gap-4 justify-end">
+                    <div className="flex flex-col sm:flex-row items-center gap-4 justify-end">
                         <button
                             type="submit"
                             disabled={status === 'sending'}
                             aria-busy={status === 'sending'}
-                            className="inline-flex items-center  px-4 py-2 bg-[#171611] text-[#E5E7EB] rounded-md font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+                            className="inline-flex items-center px-6 py-2 bg-[#171611] text-[#E5E7EB] rounded-md font-medium disabled:opacity-60 disabled:cursor-not-allowed"
                         >
                             {status === 'sending' ? 'Enviando…' : 'Enviar mensaje'}
                         </button>
 
-                        {status === 'success' && <span className="text-green-600">¡Mensaje enviado! Te contactamos pronto.</span>}
-                        {status === 'error' && <span className="text-red-600">Error al enviar.</span>}
+                        {status === 'success' && (
+                            <span className="text-green-600 text-center sm:text-left">
+                                ¡Mensaje enviado! Te contactamos pronto.
+                            </span>
+                        )}
+                        {status === 'error' && (
+                            <span className="text-red-600 text-center sm:text-left">
+                                Error al enviar.
+                            </span>
+                        )}
                     </div>
                 </div>
-                <div className='basis-1/3'>
+
+                {/* Sidebar */}
+                <div className="basis-full md:basis-1/3">
                     <ContactSidebar />
                 </div>
             </form>
         </section>
+
 
 
     );
