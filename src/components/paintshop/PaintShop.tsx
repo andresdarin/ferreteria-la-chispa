@@ -75,9 +75,9 @@ export const PaintshopCategories: React.FC = () => {
                                     src={cat.image}
                                     alt={cat.title}
                                     fill
-                                    className="object-cover brightness-90 group-hover:brightness-70 transition-all"
+                                    className="object-cover w-full h-full brightness-75 group-hover:brightness-50 transition-all"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/40 to-transparent" />
                                 <div className="absolute bottom-0 p-5 text-white">
                                     <h3 className="text-xl font-bold">{cat.title}</h3>
                                     <p className="text-sm text-gray-200">{cat.description}</p>

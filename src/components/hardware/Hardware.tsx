@@ -12,32 +12,32 @@ export const HardwareCategories: React.FC = () => {
         {
             title: "Ferretería",
             description: "Más de 1.200 herramientas para profesionales y hogar.",
-            image: "/img/HardwareShop/tools.jpg",
+            image: "/img/PaintShop/tools.jpg",
         },
         {
             title: "Sanitaria",
             description: "Cañerías, grifería y accesorios con la mejor calidad.",
-            image: "/img/HardwareShop/sanitary.jpg",
+            image: "/img/PaintShop/sanitary.jpg",
         },
         {
             title: "Electricidad",
             description: "Cables, lámparas y todo para tus instalaciones seguras.",
-            image: "/img/HardwareShop/electricity.jpg",
+            image: "/img/PaintShop/electricity.jpg",
         },
         {
             title: "Pinturería",
             description: "Amplia gama de pinturas y esmaltes para cada proyecto.",
-            image: "/img/HardwareShop/paints.jpg",
+            image: "/img/PaintShop/paints.jpg",
         },
         {
             title: "Construcción",
             description: "Materiales resistentes para obras grandes y pequeñas.",
-            image: "/img/HardwareShop/construction.jpg",
+            image: "/img/PaintShop/construction.jpg",
         },
         {
             title: "Calefacción",
             description: "Estufas, salamandras y accesorios para el invierno.",
-            image: "/img/HardwareShop/stove.jpg",
+            image: "/img/PaintShop/stove.jpg",
         },
     ];
 
@@ -75,7 +75,7 @@ export const HardwareCategories: React.FC = () => {
                                     height={320}
                                     className="object-cover w-full h-full brightness-75 group-hover:brightness-50 transition-all"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/40 to-transparent" />
                                 <div className="absolute bottom-0 p-5 text-white">
                                     <h3 className="text-xl font-bold">{cat.title}</h3>
                                     <p className="text-sm text-gray-300">{cat.description}</p>
