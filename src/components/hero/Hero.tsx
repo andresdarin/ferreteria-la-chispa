@@ -26,7 +26,7 @@ export default function Hero({
     highlight = "ACÁ.",
     subtitle = "EQUIPATE CON LO",
     subHighlight = "MEJOR",
-    cta = { label: "Ver categorías", href: "#ferretería" },
+    cta = { label: "Descubrilo!", href: "#ferretería" },
     imgAlt = "Taladro profesional - La Chispa",
     imgSrc = "/img/bg-hero.png",
     heightClass = "h-[78vh] md:h-[88vh]",
