@@ -12,33 +12,33 @@ export const PaintshopCategories: React.FC = () => {
         {
             title: "Pinturas para Interior",
             description: "Colores vibrantes y acabados perfectos para tus ambientes.",
-            image: "/img/paintshop/interior.jpg",
+            image: "/img/PaintShop/interior.jpg",
         },
         {
             title: "Pinturas para Exterior",
             description: "Protección y estilo frente a la intemperie.",
-            image: "/img/paintshop/exterior.jpg",
+            image: "/img/PaintShop/exterior.jpg",
         },
         {
             title: "Accesorios y Rodillos",
             description: "Todo lo que necesitás para aplicar con precisión.",
-            image: "/img/paintshop/rodillo.jpg",
+            image: "/img/PaintShop/rodillo.jpg",
         },
         {
             title: "Línea de Aerosoles",
             description: "Pinturas, lubricantes y productos especiales en aerosol para múltiples usos.",
-            image: "/img/paintshop/spray.jpg",
+            image: "/img/PaintShop/spray.jpg",
 
         },
         {
             title: "Selladores y Barnices",
             description: "Protegé y realzá la belleza natural de la madera.",
-            image: "/img/paintshop/barniz.jpg",
+            image: "/img/PaintShop/barniz.jpg",
         },
         {
             title: "Nuevas Tendencias",
             description: "Paletas de temporada y combinaciones exclusivas.",
-            image: "/img/paintshop/trendy.jpg",
+            image: "/img/PaintShop/trendy.jpg",
         },
     ];
 

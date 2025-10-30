@@ -12,32 +12,32 @@ export const HardwareCategories: React.FC = () => {
         {
             title: "Ferretería",
             description: "Más de 1.200 herramientas para profesionales y hogar.",
-            image: "/img/PaintShop/tools.jpg",
+            image: "/img/HardwareShop/tools.jpg",
         },
         {
             title: "Sanitaria",
             description: "Cañerías, grifería y accesorios con la mejor calidad.",
-            image: "/img/PaintShop/sanitary.jpg",
+            image: "/img/HardwareShop/sanitary.jpg",
         },
         {
             title: "Electricidad",
             description: "Cables, lámparas y todo para tus instalaciones seguras.",
-            image: "/img/PaintShop/electricity.jpg",
+            image: "/img/HardwareShop/electricity.jpg",
         },
         {
             title: "Pinturería",
             description: "Amplia gama de pinturas y esmaltes para cada proyecto.",
-            image: "/img/PaintShop/paints.jpg",
+            image: "/img/HardwareShop/paints.jpg",
         },
         {
             title: "Construcción",
             description: "Materiales resistentes para obras grandes y pequeñas.",
-            image: "/img/PaintShop/construction.jpg",
+            image: "/img/HardwareShop/construction.jpg",
         },
         {
             title: "Calefacción",
             description: "Estufas, salamandras y accesorios para el invierno.",
-            image: "/img/PaintShop/stove.jpg",
+            image: "/img/HardwareShop/stove.jpg",
         },
     ];
 
