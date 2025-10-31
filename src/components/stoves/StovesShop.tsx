@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const MetavilaStovesSection: React.FC = () => {
     return (
-        <section className="bg-[#f8efe6] py-16 shadow-xl/30 mx-auto my-16">
+        <section className="bg-[#f8efe6] py-16 shadow-xl/30 mx-auto mb-16">
             <div className="max-w-6xl mx-auto px-6 text-[#171611] text-center">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-6 flex justify-center items-center gap-2">
                     Estufas <span className="text-[#c44b1a] font-black">Metavila</span>

@@ -136,7 +136,7 @@ export default function ContactForm(): JSX.Element {
                                 type="tel"
                                 value={phone}
                                 onChange={e => setPhone(e.target.value)}
-                                placeholder="+54 9 11 1234 5678"
+                                placeholder="(+598) 099 123 456"
                                 className="bg-[#E5E7EB] text-gray-500 border-b-2 border-[#171611] px-3 py-2 focus:outline-none"
                             />
                         </label>

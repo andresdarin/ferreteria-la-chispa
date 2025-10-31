@@ -42,9 +42,9 @@ export const HardwareCategories: React.FC = () => {
     ];
 
     return (
-        <section className="bg-[#f5f5f5] py-16 rounded-b-4xl" id="ferreteria">
+        <section className="bg-[#f5f5f5] py-8 rounded-b-4xl" id="ferreteria">
             <div className="max-w-7xl mx-auto px-6">
-                <header className="flex items-center gap-4 mb-4 bg-[#171611] rounded-full px-4 py-2 text-[#f5f5f5]">
+                <header className="flex items-center gap-4 my-4 bg-[#171611] rounded-full px-4 py-2 text-[#f5f5f5]">
                     <div aria-hidden className="w-12 h-12 flex items-center justify-center">
                         <Image
                             src="/img/chispa.ico"
