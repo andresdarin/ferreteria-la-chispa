@@ -12,7 +12,7 @@ export default function ContactForm(): JSX.Element {
     const [company, setCompany] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
-    const [subject, setSubject] = useState('Consulta sobre productos y presupuestos');
+    const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const [status, setStatus] = useState<Status>('idle');
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
@@ -25,7 +25,7 @@ export default function ContactForm(): JSX.Element {
         setCompany('');
         setEmail('');
         setPhone('');
-        setSubject('Consulta sobre productos y presupuestos');
+        setSubject('');
         setMessage('');
     };
 
